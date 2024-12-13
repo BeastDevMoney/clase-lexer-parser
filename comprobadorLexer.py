@@ -17,7 +17,12 @@ def run_lexer_tests(base_path):
 
     # Iterate through test directories
     for test_dir in test_dirs:
-        full_test_dir = os.path.join(base_path, test_dir)
+        full_test_dir = os.path.join(base_path, "01", test_dir)
+        
+        # Skip if directory doesn't exist
+        if not os.path.exists(full_test_dir):
+            print(f"Directory not found: {full_test_dir}")
+            continue
         
         # Find .test files
         for filename in os.listdir(full_test_dir):
@@ -25,12 +30,17 @@ def run_lexer_tests(base_path):
                 test_path = os.path.join(full_test_dir, filename)
                 out_path = os.path.join(full_test_dir, filename.replace('.test', '.out'))
                 
+                # Ensure output file exists for expected output
+                if not os.path.exists(out_path):
+                    print(f"No corresponding .out file for {filename}")
+                    continue
+                
                 # Read test file
-                with open(test_path, 'r') as f:
+                with open(test_path, 'r', encoding='utf-8') as f:
                     test_content = f.read()
                 
                 # Read expected output
-                with open(out_path, 'r') as f:
+                with open(out_path, 'r', encoding='utf-8') as f:
                     expected_output = f.read().strip().split('\n')
                 
                 # Run lexer
@@ -45,10 +55,16 @@ def run_lexer_tests(base_path):
                 results_filename = f"{filename.replace('.test', '')}-[out].txt"
                 results_file_path = os.path.join(results_dir, results_filename)
                 
+                # Ensure results directory exists
+                os.makedirs(os.path.dirname(results_file_path), exist_ok=True)
+                
                 # Compare actual and expected output
-                with open(results_file_path, 'w') as f:
+                with open(results_file_path, 'w', encoding='utf-8') as f:
+                    # Write actual output
                     f.write("Actual Output:\n")
                     f.write('\n'.join(actual_output) + '\n\n')
+                    
+                    # Write expected output
                     f.write("Expected Output:\n")
                     f.write('\n'.join(expected_output) + '\n\n')
                     
@@ -68,8 +84,9 @@ def run_lexer_tests(base_path):
                 
                 # Print status
                 print(f"Processed {filename}: {'PASSED' if not diff else 'FAILED'}")
+                print(f"Results written to {results_file_path}")
 
 if __name__ == '__main__':
-    # Assuming the script is in the /01 directory
+    # Assuming the script is in the project directory
     base_path = os.path.dirname(os.path.abspath(__file__))
     run_lexer_tests(base_path)

@@ -1,11 +1,9 @@
 # coding: utf-8
+# coding: utf-8
 from sly import Lexer
-from sly.yacc import _
 import os
 import re
 import sys
-
-
 
 
 
@@ -24,6 +22,8 @@ class CoolLexer(Lexer):
     CARACTERES_CONTROL = [bytes.fromhex(i+hex(j)[-1]).decode('ascii')
                           for i in ['0', '1']
                           for j in range(16)] + [bytes.fromhex(hex(127)[-2:]).decode("ascii")]
+    
+    # Ejercicio 1, definimos las expresiones regulares para los tokens
 
     @_(r'\t| |\v|\r|\f') #Para cualquier \t, \v, \r, \f significa que conlleva un espacio, por eso pasa
     def spaces(self, t):

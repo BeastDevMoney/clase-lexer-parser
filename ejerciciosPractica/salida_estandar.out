@@ -1,0 +1,157 @@
+Grammar:
+
+Rule 0     S' -> E
+Rule 1     E -> N
+Rule 2     E -> E OP E
+Rule 3     N -> D
+Rule 4     N -> N D
+Rule 5     D -> DOS
+Rule 6     D -> UNO
+Rule 7     OP -> POR
+Rule 8     OP -> MAS
+
+Terminals, with rules where they appear:
+
+DOS                  : 5
+MAS                  : 8
+POR                  : 7
+UNO                  : 6
+error                : 
+
+Nonterminals, with rules where they appear:
+
+D                    : 3 4
+E                    : 2 2 0
+N                    : 1 4
+OP                   : 2
+
+
+state 0
+
+    (0) S' -> . E
+    (1) E -> . N
+    (2) E -> . E OP E
+    (3) N -> . D
+    (4) N -> . N D
+    (5) D -> . DOS
+    (6) D -> . UNO
+    DOS             shift and go to state 4
+    UNO             shift and go to state 5
+
+    E                              shift and go to state 1
+    N                              shift and go to state 2
+    D                              shift and go to state 3
+
+state 1
+
+    (0) S' -> E .
+    (2) E -> E . OP E
+    (7) OP -> . POR
+    (8) OP -> . MAS
+    POR             shift and go to state 7
+    MAS             shift and go to state 8
+
+    OP                             shift and go to state 6
+
+state 2
+
+    (1) E -> N .
+    (4) N -> N . D
+    (5) D -> . DOS
+    (6) D -> . UNO
+    POR             reduce using rule 1 (E -> N .)
+    MAS             reduce using rule 1 (E -> N .)
+    $end            reduce using rule 1 (E -> N .)
+    DOS             shift and go to state 4
+    UNO             shift and go to state 5
+
+    D                              shift and go to state 9
+
+state 3
+
+    (3) N -> D .
+    DOS             reduce using rule 3 (N -> D .)
+    UNO             reduce using rule 3 (N -> D .)
+    POR             reduce using rule 3 (N -> D .)
+    MAS             reduce using rule 3 (N -> D .)
+    $end            reduce using rule 3 (N -> D .)
+
+
+state 4
+
+    (5) D -> DOS .
+    DOS             reduce using rule 5 (D -> DOS .)
+    UNO             reduce using rule 5 (D -> DOS .)
+    POR             reduce using rule 5 (D -> DOS .)
+    MAS             reduce using rule 5 (D -> DOS .)
+    $end            reduce using rule 5 (D -> DOS .)
+
+
+state 5
+
+    (6) D -> UNO .
+    DOS             reduce using rule 6 (D -> UNO .)
+    UNO             reduce using rule 6 (D -> UNO .)
+    POR             reduce using rule 6 (D -> UNO .)
+    MAS             reduce using rule 6 (D -> UNO .)
+    $end            reduce using rule 6 (D -> UNO .)
+
+
+state 6
+
+    (2) E -> E OP . E
+    (1) E -> . N
+    (2) E -> . E OP E
+    (3) N -> . D
+    (4) N -> . N D
+    (5) D -> . DOS
+    (6) D -> . UNO
+    DOS             shift and go to state 4
+    UNO             shift and go to state 5
+
+    E                              shift and go to state 10
+    N                              shift and go to state 2
+    D                              shift and go to state 3
+
+state 7
+
+    (7) OP -> POR .
+    DOS             reduce using rule 7 (OP -> POR .)
+    UNO             reduce using rule 7 (OP -> POR .)
+
+
+state 8
+
+    (8) OP -> MAS .
+    DOS             reduce using rule 8 (OP -> MAS .)
+    UNO             reduce using rule 8 (OP -> MAS .)
+
+
+state 9
+
+    (4) N -> N D .
+    DOS             reduce using rule 4 (N -> N D .)
+    UNO             reduce using rule 4 (N -> N D .)
+    POR             reduce using rule 4 (N -> N D .)
+    MAS             reduce using rule 4 (N -> N D .)
+    $end            reduce using rule 4 (N -> N D .)
+
+
+state 10
+
+    (2) E -> E OP E .
+    (2) E -> E . OP E
+    (7) OP -> . POR
+    (8) OP -> . MAS
+  ! shift/reduce conflict for POR resolved as shift
+  ! shift/reduce conflict for MAS resolved as shift
+    $end            reduce using rule 2 (E -> E OP E .)
+    POR             shift and go to state 7
+    MAS             shift and go to state 8
+
+    OP                             shift and go to state 6
+
+Conflicts:
+
+shift/reduce conflict for POR in state 10 resolved as shift
+shift/reduce conflict for MAS in state 10 resolved as shift

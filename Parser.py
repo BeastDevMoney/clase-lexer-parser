@@ -14,85 +14,117 @@ class CoolParser(Parser):
     errores = []
 
     precedence = (
-        ('right', 'ASSIGN'), # Esta operación es asociatiava hacia la derecha. o sea que T1 <- T2 <- T3 se interpreta como T1 <- (T2 <- T3)
-        ('nonassoc', 'LE','<','=','NOT'), #Las 3 oeraciones loigcas no son asoicativas
-        ("left",'ISVOID', '/','*','+', '-'),
+        ('right', 'ASSIGN'),  # Esta operación es asociativa hacia la derecha. o sea que T1 <- T2 <- T3 se interpreta como T1 <- (T2 <- T3)
+        ('nonassoc', 'LE', '<', '=', 'NOT'),  # Las 3 operaciones lógicas no son asociativas
+        ("left", 'ISVOID', '/', '*', '+', '-'),
         ('nonassoc', '@'),
-        ('nonassoc','.')
-        )
+        ('nonassoc', '.')
+    )
 
+    # Regla principal que define el programa completo
+    @_('class_list')
+    def Programa(self, p):
+        return Programa(clases=p.class_list)
 
-    #Ejercicio 2, definimos la gramática admitida por Cool
+    # Lista de clases
+    @_('class_decl class_list')
+    def class_list(self, p):
+        return [p.class_decl] + p.class_list
 
-    @_('OBJECTID ":" TYPEID ";"') #⟨Formal⟩ ::= OBJECTID : TYPEID
-    def atributo(self, p):
-        return Atributo(nombre=p.OBJECTID, tipo=p.TYPEID, cuerpo=NoExpr())
-    
-    
-    
-    #definimos la expresion de asignación de un objeto y una expresion. Cuya expresión puede ser representada de las siguientes formas:
-    '''
-    
-    | ⟨Expresion⟩ + ⟨Expresion⟩
-    | ⟨Expresion⟩ - ⟨Expresion⟩
-    | ⟨Expresion⟩ * ⟨Expresion⟩
-    | ⟨Expresion⟩ / ⟨Expresion⟩
-    | ⟨Expresion⟩ < ⟨Expresion⟩
-    | ⟨Expresion⟩ <= ⟨Expresion⟩ Este se escribe como LE, lower or iqual. Porque está reservado el símbolo <= 
-    | ⟨Expresion⟩ = ⟨Expresion⟩
-    | ( ⟨Expresion⟩ )
-    | NOT ⟨Expresion⟩ Esto tiene su propia operacion NOT
-    | ISVOID ⟨Expresion⟩
-    | ~ ⟨Expresion⟩ Esto es equivalente a la clase NEG de Clases.py
-    | ⟨Expresion⟩ @ TYPEID . OBJECTID ( )
-    | ⟨Expresion⟩ @ TYPEID . OBJECTID ( (⟨Expresion⟩ ,)* ⟨Expresion⟩ )
-    | [ ⟨Expresion⟩ .] OBJECTID ( (⟨Expresion⟩ ,)* ⟨Expresion⟩ )
-    | [ ⟨Expresion⟩ .] OBJECTID ( )
-    | IF ⟨Expresion⟩ THEN ⟨Expresion⟩ ELSE ⟨Expresion⟩ FI
-    | WHILE ⟨Expresion⟩ LOOP ⟨Expresion⟩ POOL
-    | LET OBJECTID : TYPEID [<- ⟨Expresion⟩] (, OBJECTID : TYPEID [<- ⟨Expresion⟩])* IN ⟨Expresion⟩
-    | CASE ⟨Expresion⟩ OF (OBJECTID : TYPEID DARROW <Expresion>)+ ; ESAC
-    | NEW TYPEID
-    | { (⟨Expresion⟩ ;) + }
-    | OBJECTID
-    | INT_CONST
-    | STR_CONST
-    | BOOL_CONST
-    '''
-    #⟨Expresion⟩ ::= OBJECTID ASSIGN ⟨Expresion⟩
-    @_('OBJECTID ":" TYPEID ASSIGN expresion ";"') 
-    def atributo(self, p):
-        return Atributo(nombre=p.OBJECTID, tipo=p.TYPEID, cuerpo=p.expresion)
-    
+    @_('class_decl')
+    def class_list(self, p):
+        return [p.class_decl]
+
+    # Regla para clases
+    @_('CLASS TYPEID "{" feature_list "}"')
+    def class_decl(self, p):
+        return Clase(nombre=p.TYPEID, padre=None, cuerpo=p.feature_list)
+
+    @_('CLASS TYPEID INHERITS TYPEID "{" feature_list "}"')
+    def class_decl(self, p):
+        return Clase(nombre=p.TYPEID, padre=p.TYPEID1, cuerpo=p.feature_list)
+
+    # Lista de características (features)
+    @_('feature ";" feature_list')
+    def feature_list(self, p):
+        return [p.feature] + p.feature_list
+
+    @_('feature ";"')
+    def feature_list(self, p):
+        return [p.feature]
+
+    # Método
+    @_('OBJECTID "(" formal_list ")" ":" TYPEID "{" expresion "}"')
+    def feature(self, p):
+        return Metodo(nombre=p.OBJECTID, tipo=p.TYPEID, formales=p.formal_list, cuerpo=p.expresion)
+
+    @_('formal "," formal_list')
+    def formal_list(self, p):
+        return [p.formal] + p.formal_list
+
+    @_('formal')
+    def formal_list(self, p):
+        return [p.formal]
+
+    @_('OBJECTID ":" TYPEID')
+    def formal(self, p):
+        return Formal(nombre=p.OBJECTID, tipo=p.TYPEID)
+
+    # Bloques de expresiones
+    @_('"{" expresion_list "}"')
+    def expresion(self, p):
+        return Bloque(cuerpo=p.expresion_list)
+
+    @_('expresion ";" expresion_list')
+    def expresion_list(self, p):
+        return [p.expresion] + p.expresion_list
+
+    @_('expresion ";"')
+    def expresion_list(self, p):
+        return [p.expresion]
+
+    # Operaciones y expresiones básicas
     @_('expresion "+" expresion',
        'expresion "-" expresion',
        'expresion "*" expresion',
        'expresion "/" expresion',
        'expresion "<" expresion',
        'expresion "=" expresion',
-       'expresion LE expresion',
-       '"(" expresion ")"',
-       '"~" expresion')
-    def expresion(self,p):
-        #definimos formalmente las operaciones
-        #Tener en cuenta que estamos definiendo las entradas de las clases importadas del archivo Clases.py
+       'expresion LE expresion')
+    def expresion(self, p):
         if p[1] == '+':
-            return Suma(izquierda=p.expresion0, derecha=p.expresion1, operando='+') #Se hace con izquierda expreison0 y derecha expresion1 por las reglas de precedencia: "left",'ISVOID', '/','*','+', '-'
+            return Suma(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == '-':
-            return Resta(izquierda=p.expresion0, derecha=p.expresion1, operando='-')
+            return Resta(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == '*':
-            return Multiplicacion(izquierda=p.expresion0, derecha=p.expresion1, operando='*')
+            return Multiplicacion(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == '/':
-            return Division(izquierda=p.expresion0, derecha=p.expresion1, operando='/')
+            return Division(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == '<':
-            return Menor(izquierda=p.expresion0, derecha=p.expresion1, operando='<')
+            return Menor(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == '=':
-            return Igual(izquierda=p.expresion0, derecha=p.expresion1, operando='=')
+            return Igual(izquierda=p.expresion0, derecha=p.expresion1)
         elif p[1] == 'LE':
-            return LeIgual(izquierda=p.expresion0, derecha=p.expresion1, operando='LE')
-        elif p[0] == '(' and p[2] == ')':
-            pass #Signfica que de p, el primer elemnetosea el primer parentesis y el tercero sea el segundo parentesis y el segundo sea la expresion p[1] = expresion
-        elif p[0] == '~':
-            return Neg(expr=p.expresion, operador='~')
-        
-        
+            return LeIgual(izquierda=p.expresion0, derecha=p.expresion1)
+
+    @_('ISVOID expresion')
+    def expresion(self, p):
+        return IsVoid(expr=p.expresion)
+
+    @_('NOT expresion')
+    def expresion(self, p):
+        return Not(expr=p.expresion)
+
+    @_('"~" expresion')
+    def expresion(self, p):
+        return Neg(expr=p.expresion)
+
+    # Manejo de errores
+    def error(self, p):
+        if p:
+            print(f"Error de sintaxis: token inesperado '{p.value}' en línea {p.lineno}")
+            self.errores.append(f"Error de sintaxis: token inesperado '{p.value}' en línea {p.lineno}")
+            self.errok()
+        else:
+            print("Error de sintaxis: fin inesperado del archivo")
+            self.errores.append("Error de sintaxis: fin inesperado del archivo")

@@ -1,0 +1,31 @@
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'Token(type=';', value=';', lineno=3, index=38, end=39)' en línea 3
+Error de sintaxis: token inesperado 'y' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado ')' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado '{' en línea 3
+Error de sintaxis: token inesperado 'if' en línea 3
+Error de sintaxis: token inesperado 'True' en línea 3
+Error de sintaxis: token inesperado 'then' en línea 3
+Error de sintaxis: token inesperado '4' en línea 3
+Error de sintaxis: token inesperado 'else' en línea 3
+Error de sintaxis: token inesperado '5' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

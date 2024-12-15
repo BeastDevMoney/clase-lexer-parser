@@ -1,0 +1,55 @@
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='}', value='}', lineno=4, index=60, end=61)' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado 'bum' en línea 5
+Error de sintaxis: token inesperado '(' en línea 5
+Error de sintaxis: token inesperado ')' en línea 5
+Error de sintaxis: token inesperado ':' en línea 5
+Error de sintaxis: token inesperado 'Test' en línea 5
+Error de sintaxis: token inesperado '{' en línea 5
+Error de sintaxis: token inesperado '{' en línea 5
+Error de sintaxis: token inesperado 'x' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: token inesperado 'y' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: token inesperado 'z' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: token inesperado '}' en línea 5
+Error de sintaxis: token inesperado '}' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: token inesperado 'boo' en línea 6
+Error de sintaxis: token inesperado '(' en línea 6
+Error de sintaxis: token inesperado ')' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'String' en línea 6
+Error de sintaxis: token inesperado '{' en línea 6
+Error de sintaxis: token inesperado '}' en línea 6
+Error de sintaxis: token inesperado ';' en línea 6
+Error de sintaxis: token inesperado 'test' en línea 7
+Error de sintaxis: token inesperado '(' en línea 7
+Error de sintaxis: token inesperado 'x' en línea 7
+Error de sintaxis: token inesperado ':' en línea 7
+Error de sintaxis: token inesperado 'Int' en línea 7
+Error de sintaxis: token inesperado ')' en línea 7
+Error de sintaxis: token inesperado ':' en línea 7
+Error de sintaxis: token inesperado 'String' en línea 7
+Error de sintaxis: token inesperado '{' en línea 7
+Error de sintaxis: token inesperado '"Recovered from errors"' en línea 7
+Error de sintaxis: token inesperado '}' en línea 7
+Error de sintaxis: token inesperado ';' en línea 7
+Error de sintaxis: token inesperado '}' en línea 8
+Error de sintaxis: token inesperado ';' en línea 8
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

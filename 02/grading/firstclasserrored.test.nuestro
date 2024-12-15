@@ -1,0 +1,27 @@
+Error de sintaxis: token inesperado 'asdfjkasldfjdklaf' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='asdfjkasldfjdklaf', lineno=1, index=19, end=36)' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='asdfjkasldfjdklaf', lineno=1, index=19, end=36)' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='asdfjkasldfjdklaf', lineno=1, index=19, end=36)' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='asdfjkasldfjdklaf', lineno=1, index=19, end=36)' en línea 1
+Error de sintaxis: token inesperado ';' en línea 1
+Error de sintaxis: token inesperado 'B' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='B', lineno=3, index=79, end=80)' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

@@ -1,0 +1,27 @@
+Error de sintaxis: token inesperado 'test' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='test', lineno=1, index=6, end=10)' en línea 1
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='test', lineno=1, index=6, end=10)' en línea 1
+Error de sintaxis: token inesperado '{' en línea 1
+Error de sintaxis: token inesperado 'foo' en línea 2
+Error de sintaxis: token inesperado ':' en línea 2
+Error de sintaxis: token inesperado 'Test' en línea 2
+Error de sintaxis: token inesperado ';' en línea 2
+Error de sintaxis: token inesperado 'bar' en línea 3
+Error de sintaxis: token inesperado '(' en línea 3
+Error de sintaxis: token inesperado ')' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado '{' en línea 3
+Error de sintaxis: token inesperado '5' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado 'recover' en línea 6
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='recover', lineno=6, index=57, end=64)' en línea 6
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='recover', lineno=6, index=57, end=64)' en línea 6
+Error de sintaxis: token inesperado '{' en línea 6
+Error de sintaxis: token inesperado '}' en línea 7
+Error de sintaxis: token inesperado ';' en línea 7
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

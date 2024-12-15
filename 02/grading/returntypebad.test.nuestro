@@ -1,0 +1,22 @@
+Error de sintaxis: token inesperado 'b' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='OBJECTID', value='b', lineno=2, index=29, end=30)' en línea 2
+Error de sintaxis: token inesperado '{' en línea 2
+Error de sintaxis: token inesperado '5' en línea 3
+Error de sintaxis: token inesperado '+' en línea 3
+Error de sintaxis: token inesperado '3' en línea 3
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado '}' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

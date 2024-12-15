@@ -1,0 +1,11 @@
+Error de sintaxis: token inesperado '{' en línea 1
+Error de sintaxis: token inesperado 'Token(type='{', value='{', lineno=1, index=6, end=7)' en línea 1
+Error de sintaxis: token inesperado 'Token(type='{', value='{', lineno=1, index=6, end=7)' en línea 1
+Error de sintaxis: token inesperado 'foo' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 5
+Error de sintaxis: token inesperado ';' en línea 5
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

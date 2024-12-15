@@ -1,0 +1,34 @@
+Error de sintaxis: token inesperado 'loop' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado 'Token(type='LOOP', value='loop', lineno=8, index=125, end=129)' en línea 8
+Error de sintaxis: token inesperado ';' en línea 8
+Error de sintaxis: token inesperado 'while' en línea 9
+Error de sintaxis: token inesperado '1' en línea 9
+Error de sintaxis: token inesperado 'pool' en línea 9
+Error de sintaxis: token inesperado '1' en línea 9
+Error de sintaxis: token inesperado 'pool' en línea 9
+Error de sintaxis: token inesperado ';' en línea 9
+Error de sintaxis: token inesperado '}' en línea 10
+Error de sintaxis: token inesperado '}' en línea 10
+Error de sintaxis: token inesperado ';' en línea 10
+Error de sintaxis: token inesperado '}' en línea 11
+Error de sintaxis: token inesperado ';' en línea 11
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

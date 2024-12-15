@@ -1,0 +1,50 @@
+Error de sintaxis: token inesperado '<-' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='ASSIGN', value='<-', lineno=3, index=28, end=30)' en línea 3
+Error de sintaxis: token inesperado '89' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado 'bar' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Int' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado 'foo' en línea 6
+Error de sintaxis: token inesperado '(' en línea 6
+Error de sintaxis: token inesperado 'a' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'Int' en línea 6
+Error de sintaxis: token inesperado ',' en línea 6
+Error de sintaxis: token inesperado 'b' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'Int' en línea 6
+Error de sintaxis: token inesperado ',' en línea 6
+Error de sintaxis: token inesperado 'c' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'String' en línea 6
+Error de sintaxis: token inesperado ')' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'Int' en línea 6
+Error de sintaxis: token inesperado '{' en línea 6
+Error de sintaxis: token inesperado 'new' en línea 7
+Error de sintaxis: token inesperado 'a' en línea 7
+Error de sintaxis: token inesperado '}' en línea 8
+Error de sintaxis: token inesperado ';' en línea 8
+Error de sintaxis: token inesperado 'bar' en línea 10
+Error de sintaxis: token inesperado '(' en línea 10
+Error de sintaxis: token inesperado ')' en línea 10
+Error de sintaxis: token inesperado ':' en línea 10
+Error de sintaxis: token inesperado 'Int' en línea 10
+Error de sintaxis: token inesperado '{' en línea 10
+Error de sintaxis: token inesperado '6' en línea 11
+Error de sintaxis: token inesperado '}' en línea 12
+Error de sintaxis: token inesperado ';' en línea 12
+Error de sintaxis: token inesperado '}' en línea 15
+Error de sintaxis: token inesperado ';' en línea 15
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

@@ -1,0 +1,17 @@
+Error de sintaxis: token inesperado 'Foo' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='Foo', lineno=3, index=20, end=23)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='Foo', lineno=3, index=20, end=23)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='Foo', lineno=3, index=20, end=23)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='Foo', lineno=3, index=20, end=23)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='TYPEID', value='Foo', lineno=3, index=20, end=23)' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado 'bar' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Int' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado '}' en línea 6
+Error de sintaxis: token inesperado ';' en línea 6
+Error de sintaxis: fin inesperado del archivo
+Compilation halted due to lex and parse errors

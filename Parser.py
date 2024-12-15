@@ -14,11 +14,15 @@ class CoolParser(Parser):
     errores = []
 
     precedence = (
-        ('right', 'ASSIGN'),  # Esta operación es asociativa hacia la derecha. o sea que T1 <- T2 <- T3 se interpreta como T1 <- (T2 <- T3)
-        ('nonassoc', 'LE', '<', '=', 'NOT'),  # Las 3 operaciones lógicas no son asociativas
-        ("left", 'ISVOID', '/', '*', '+', '-'),
-        ('nonassoc', '@'),
-        ('nonassoc', '.')
+        ('right', 'ASSIGN'),
+        ('left', 'NOT'),
+        ('nonassoc', 'LE', '<', '='),
+        ('left', '+', '-'),
+        ('left', '*', '/'),
+        ('left', 'ISVOID'),
+        ('left', '~'),
+        ('left', '@'),
+        ('left', '.')
     )
 
     # Regla principal que define el programa completo
@@ -38,24 +42,19 @@ class CoolParser(Parser):
 
 
     # Regla para clases ⟨Clase⟩ ::= CLASS TYPEID [inherits TYPEID] { (⟨Atributo⟩ | ⟨Metodo⟩ )* } ;
-                                                                    #Lo de arriba es un or |, entonces hay que definir para cuando sea <Atributo> y <Metodo>
-    @_('CLASS TYPEID "{" atributos "}" ";"')
-    def clase(self, p):
-        return Clase(nombre=p.TYPEID, padre="Object", nombre_fichero=self.nombre_fichero, caracteristicas=p.atributos)
 
-    @_('CLASS TYPEID "{" metodos "}" ";"')
+    @_('CLASS TYPEID atributosHeredados "{" atributos "}" ";"')
     def clase(self, p):
-        return Clase(nombre=p.TYPEID, padre="Object", nombre_fichero=self.nombre_fichero, caracteristicas=p.metodos)
+        return Clase(nombre=p.TYPEID, padre=p.atributosHeredados, nombre_fichero=self.nombre_fichero, caracteristicas=p.atributos)
+
+
+    @_('INHERITS TYPEID')
+    def atributosHeredados(self, p):
+        return p.TYPEID
     
-
-    @_('CLASS TYPEID INHERITS TYPEID "{" atributos "}" ";"')
-    def clase(self, p):
-        return Clase(nombre=p.TYPEID0, padre=p.TYPEID1, nombre_fichero=self.nombre_fichero, caracteristicas=p.atributos)
-
-    @_('CLASS TYPEID INHERITS TYPEID "{" metodos "}" ";"')
-    def clase(self, p):
-        return Clase(nombre=p.TYPEID0, padre=p.TYPEID1, nombre_fichero=self.nombre_fichero, caracteristicas=p.metodos)
-
+    @_('')
+    def atributosHeredados(self, p):
+        return 'Object'
 
     # Lista de atributos (features)
     @_('atributos  atributo')
@@ -65,84 +64,98 @@ class CoolParser(Parser):
     @_(' ') #Si no hay atributos, se devuelve una lista vacía
     def atributos(self, p):
         return []
+    
+    @_('atributo')
+    def atributo(self, p):
+        return p[0]
 
-    #Definimos las reglas para atributs:⟨Atributo⟩ ::= OBJECTID : TYPEID [ASSIGN ⟨Expresion⟩];
+
+    @_('metodo')
+    def atributo(self, p):
+        return p[0]
+    
+    
     @_('OBJECTID ":" TYPEID ";"')
     def atributo(self, p):
         return Atributo(nombre=p.OBJECTID, tipo=p.TYPEID, cuerpo=NoExpr()) #Para este tipo, es solo el Object id y su tipo, no tiene expresion
     
-    @_('OBJECTID ":" TYPEID ASSIGN expresion ";"')
-    def atributo(self, p):
-        return Atributo(nombre=p.OBJECTID, tipo=p.TYPEID, cuerpo=p.expresion)
-    
 
-    # Defininoms los métodos y su gramática
-    @_('metodos metodo', ' ') #Si hay más de un método, se devuelve una lista con los métodos
-    def metodos(self, p):
-        return [p.metodos] + p.metodo
-    
     #⟨Metodo⟩ ::= OBJECTID ( ) : TYPEID { ⟨Expresion⟩ } ; Pueden ser con la lista de formales vacía
     #| OBJECTID ( (⟨Formal⟩ , )* ⟨Formal⟩ ) : TYPEID { ⟨Expresion⟩ } ; Pueden ser con la lista de formales no vacía
 
-    @_('OBJECTID "(" ")" ":" TYPEID "{" expresion "}" ";"') #Formales vacía
-    def metodo(self, p):
-        return Metodo(nombre=p.OBJECTID, formales=[], tipo=p.TYPEID, cuerpo=p.expresion)
-    
     @_('OBJECTID "(" formales ")" ":" TYPEID "{" expresion "}" ";"') #Formales no vacía
+    def metodo(self, p):
+        return Metodo(nombre=p.OBJECTID, formales=p.formales, tipo=p.TYPEID, cuerpo=p.expresion)
 
-    @_('formales formal "," ')
+
+    @_('formal')
+    def formales(self, p):
+        return [p.formal]
+    
+
+    @_('formales "," formal')
     def formales(self, p):
         return p.formales + [p.formal]
 
-    #Caso en que formales este vacio
-    @_(" ")
+    @_(' ')
     def formales(self, p):
         return []
+
     
     @_('OBJECTID ":" TYPEID')
     def formal(self, p):
         return Formal(nombre_variable=p.OBJECTID, tipo=p.TYPEID)
+    
+    @_('OBJECTID ASSIGN expresion')
+    def expresion(self, p):
+        return Asignacion(nombre=p.OBJECTID, cuerpo=p.expresion)
 
     # Bloques de expresiones
 
     # Operaciones y expresiones básicas
-    @_('expresion "+" expresion',
-       'expresion "-" expresion',
-       'expresion "*" expresion',
-       'expresion "/" expresion',
-       'expresion "<" expresion',
-       'expresion "=" expresion',
-       'expresion LE expresion',
-       '"(" expresion ")"',
-       '"~" expresion')
+    @_('expresion "+" expresion')
     def expresion(self, p):
-        if p[1] == '+':
-            return Suma(izquierda=p.expresion0, derecha=p.expresion1, operando='+')
-        elif p[1] == '-':
-            return Resta(izquierda=p.expresion0, derecha=p.expresion1, operando="-")
-        elif p[1] == '*':
-            return Multiplicacion(izquierda=p.expresion0, derecha=p.expresion1, operando='*')
-        elif p[1] == '/':
-            return Division(izquierda=p.expresion0, derecha=p.expresion1, operando='/')
-        elif p[1] == '<':
-            return Menor(izquierda=p.expresion0, derecha=p.expresion1, operando='<')
-        elif p[1] == '=':
-            return Igual(izquierda=p.expresion0, derecha=p.expresion1, operando="=")
-        elif p[1] == 'LE':
-            return LeIgual(izquierda=p.expresion0, derecha=p.expresion1, operando='<=')
-        elif p[0] == '(' and p[2] == ')':
-            pass
-        elif p[0] == '~':
-            return Neg(expr=p.expresion, operador='~')
+        return Suma(izquierda=p[0], derecha=p[2], operando='+')
+
+    @_('expresion "-" expresion')
+    def expresion(self, p):
+        return Resta(izquierda=p[0], derecha=p[2], operando='-')
+
+    @_('expresion "*" expresion')
+    def expresion(self, p):
+        return Multiplicacion(izquierda=p[0], derecha=p[2], operando='*')
+
+    @_('expresion "/" expresion')
+    def expresion(self, p):
+        return Division(izquierda=p[0], derecha=p[2], operando='/')
+
+    @_('expresion "<" expresion')
+    def expresion(self, p):
+        return Menor(izquierda=p[0], derecha=p[2], operando='<')
+
+    @_('expresion LE expresion')
+    def expresion(self, p):
+        return LeIgual(izquierda=p[0], derecha=p[2], operando='<=')
+
+    @_('expresion "=" expresion')
+    def expresion(self, p):
+        return Igual(izquierda=p[0], derecha=p[2], operando='=')
+
+    @_('"(" expresion ")"')
+    def expresion(self, p):
+        return p.expresion
         
+    @_('NOT expresion')
+    def expresion(self, p):
+        return Not(expr=p.expresion, operador='NOT')
 
     @_('ISVOID expresion')
     def expresion(self, p):
         return EsNulo(expr=p.expresion)
 
-    @_('NOT expresion')
+    @_('"~" expresion')
     def expresion(self, p):
-        return Not(expr=p.expresion, operador='NOT')
+        return Neg(expr=p.expresion,operador='~')
 
     #Tipos de expresiones
     #Expresion estáticas: ⟨Expresion⟩ @ TYPEID . OBJECTID ( )
@@ -152,32 +165,42 @@ class CoolParser(Parser):
         return LlamadaMetodoEstatico(cuerpo=p.expresion, clase=p.TYPEID, nombre_metodo=p.OBJECTID, argumentos=[])
     
 
+    #⟨Expresion⟩ @ TYPEID . OBJECTID ( (⟨Expresion⟩ ,)* ⟨Expresion⟩ )
+    @_('expresion "@" TYPEID "." OBJECTID "(" expresiones  expresion ")"')
+    def expresion(self, p):
+        return LlamadaMetodoEstatico(cuerpo=p.expresion0, clase=p.TYPEID, nombre_metodo=p.OBJECTID, argumentos=p.expresiones + [p.expresion1])
+
+
+
     @_('expresiones expresion ","')
     def expresiones(self, p):
         return p.expresiones + [p.expresion]
-
 
     
     @_(' ')
     def expresiones(self, p):
         return []
 
-    #⟨Expresion⟩ @ TYPEID . OBJECTID ( (⟨Expresion⟩ ,)* ⟨Expresion⟩ )
-    @_('expresion "@" TYPEID "." OBJECTID "(" expresiones "," expresion ")"')
-    def expresion(self, p):
-        return LlamadaMetodoEstatico(cuerpo=p.expresion0, clase=p.TYPEID, nombre_metodo=p.OBJECTID, argumentos=p.expresiones + [p.expresion1])
 
     #Expresones dinámicas : [ ⟨Expresion⟩ .] OBJECTID ( (⟨Expresion⟩ ,)* ⟨Expresion⟩ )
-                        # | [ ⟨Expresion⟩ .] OBJECTID ( )
+                        # | [ ⟨Expresion⟩ .] OBJECTID ( )    
+
+    @_('expresion "." OBJECTID "(" expresiones  expresion ")"')
+    def expresion(self, p):
+        return LlamadaMetodo(cuerpo=p.expresion0, nombre_metodo=p.OBJECTID, argumentos=p.expresiones + [p.expresion1])
+
+    @_('OBJECTID "(" expresiones expresion ")"')
+    def expresion(self, p):
+        return LlamadaMetodo(nombre_metodo=p.OBJECTID, argumentos=p.expresiones + [p.expresion], cuerpo=Objeto(nombre='self'))
+
+    @_('OBJECTID "(" ")"')
+    def expresion(self, p):
+        return LlamadaMetodo(nombre_metodo=p.OBJECTID, cuerpo=Objeto(nombre='self'))
 
     @_('expresion "." OBJECTID "(" ")"')
     def expresion(self, p):
         return LlamadaMetodo(cuerpo=p.expresion, nombre_metodo=p.OBJECTID, argumentos=[])
-    
-
-    @_('expresion "." OBJECTID "(" expresiones "," expresion ")"')
-    def expresion(self, p):
-        return LlamadaMetodo(cuerpo=p.expresion0, nombre_metodo=p.OBJECTID, argumentos=p.expresiones + [p.expresion1])
+        
 
     #Estructuras de control de flujo: IF ⟨Expresion⟩ THEN ⟨Expresion⟩ ELSE ⟨Expresion⟩ FI
     #                               | WHILE ⟨Expresion⟩ LOOP ⟨Expresion⟩ POOL
@@ -186,20 +209,14 @@ class CoolParser(Parser):
     def expresion(self, p):
         return Condicional(condicion=p.expresion0, verdadero=p.expresion1, falso=p.expresion2)
     
+    
     @_('WHILE expresion LOOP expresion POOL')
     def expresion(self, p):
         return Bucle(condicion=p.expresion0, cuerpo=p.expresion1)
 
 
     #LET OBJECTID : TYPEID [<- ⟨Expresion⟩] (, OBJECTID : TYPEID [<- ⟨Expresion⟩])* IN ⟨Expresion⟩
-
-    @_(' ')
-    def opt_assign(self, p):
-        return NoExpr()
     
-    @_('ASSIGN expresion')
-    def opt_assign(self, p):
-        return p.expresion
 
     #Declaracion de unica variable
     @_('OBJECTID ":" TYPEID opt_assign')
@@ -209,7 +226,7 @@ class CoolParser(Parser):
     #Declaracion de varias variables 
     @_('let_declaration')
     def let_declarations(self, p):
-        return [p.let_declarations]
+        return [p.let_declaration]
     
     @_('let_declarations "," let_declaration')
     def let_declarations(self, p):
@@ -223,19 +240,25 @@ class CoolParser(Parser):
             cuerpoExpresion = Let(nombre=nombre, tipo=tipo, inicializacion=inicializacion, cuerpo=cuerpoExpresion)
         return cuerpoExpresion
     
-
+    @_('ASSIGN expresion')
+    def opt_assign(self, p):
+        return p.expresion
+    
+    @_(' ')
+    def opt_assign(self, p):
+        return NoExpr()
 
     #CASE ⟨Expresion⟩ OF (OBJECTID : TYPEID DARROW <Expresion>)+ ; ESAC
 
-    @_('OBJECTID ":" TYPEID DARROW expresion')
+    @_('OBJECTID ":" TYPEID DARROW expresion ";"')
     def case_list(self, p):
         return [RamaCase(nombre_variable=p.OBJECTID, tipo=p.TYPEID, cuerpo=p.expresion)]
 
-    @_('case_list OBJECTID ":" TYPEID DARROW expresion')
+    @_('case_list OBJECTID ":" TYPEID DARROW expresion ";"')
     def case_list(self, p):
         return p.case_list + [RamaCase(nombre_variable=p.OBJECTID, tipo=p.TYPEID, cuerpo=p.expresion)]
     
-    @_('CASE expresion OF case_list ";" ESAC')
+    @_('CASE expresion OF case_list ESAC')
     def expresion(self, p):
         return Swicht(expr=p.expresion, casos=p.case_list)
     
@@ -244,18 +267,18 @@ class CoolParser(Parser):
     #Expresiones entre llaves: { (⟨Expresion⟩ ;) + }
 
     #Cogemos los espacioes entre expresiones
-    @_(' ')
-    def espacios(self, p):
-        return []
-    
-    @_('espacios expresion ";"')
-    def expresion_lista(self, p):
-        return Bloque(expresiones=p.espacios + [p.expresion])
-
-    @_('"{" expresion_lista expresion ";" "}"')
+    @_('"{" llaves_rep "}"')
     def expresion(self, p):
-        return Bloque(expresiones=p.expresion_lista + [p.expresion])
-    
+        return p.llaves_rep
+
+    @_('llaves_rep expresion ";"')
+    def llaves_rep(self, p):
+        p.llaves_rep.expresiones.append(p.expresion)
+        return p.llaves_rep
+
+    @_('expresion ";"')
+    def llaves_rep(self, p):
+        return Bloque(expresiones=[p.expresion])    
 
     
     # Asignación
@@ -264,21 +287,27 @@ class CoolParser(Parser):
     def expresion(self, p):
         return Nueva(tipo=p.TYPEID)
     
+    @_('OBJECTID')
+    def expresion(self, p):
+        return Objeto(nombre=p.OBJECTID)
+    
     @_('INT_CONST')
     def expresion(self, p):
         return Entero(valor=p.INT_CONST)
     
+
     @_('STR_CONST')
     def expresion(self, p):
         return String(valor=p.STR_CONST)
     
+
     @_('BOOL_CONST')
     def expresion(self, p):
         return Booleano(valor=p.BOOL_CONST)
 
-    @_('OBJECTID')
+    @_('NUMBER')
     def expresion(self, p):
-        return Objeto(nombre=p.OBJECTID)
+        return Entero(valor=p.NUMBER)
     
 
     # Manejo de errores

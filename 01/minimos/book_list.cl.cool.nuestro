@@ -1,0 +1,592 @@
+#name "book_list.cl.cool"
+ CLASS
+ TYPEID Book
+ INHERITS
+ TYPEID IO
+ LBRACE
+ OBJECTID title
+ ':' 
+ TYPEID String
+ ';' 
+ OBJECTID author
+ ':' 
+ TYPEID String
+ ';' 
+ OBJECTID initBook
+ LPAREN
+ OBJECTID title_p
+ ':' 
+ TYPEID String
+ ',' 
+ OBJECTID author_p
+ ':' 
+ TYPEID String
+ RPAREN
+ ':' 
+ TYPEID Book
+ LBRACE
+ LBRACE
+ OBJECTID title
+ ASSIGN
+ OBJECTID title_p
+ ';' 
+ OBJECTID author
+ ASSIGN
+ OBJECTID author_p
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID print
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Book
+ LBRACE
+ LBRACE
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "title:      "
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ OBJECTID title
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "\n"
+ RPAREN
+ ';' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "author:     "
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ OBJECTID author
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "\n"
+ RPAREN
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Article
+ INHERITS
+ TYPEID Book
+ LBRACE
+ OBJECTID per_title
+ ':' 
+ TYPEID String
+ ';' 
+ OBJECTID initArticle
+ LPAREN
+ OBJECTID title_p
+ ':' 
+ TYPEID String
+ ',' 
+ OBJECTID author_p
+ ':' 
+ TYPEID String
+ ',' 
+ OBJECTID per_title_p
+ ':' 
+ TYPEID String
+ RPAREN
+ ':' 
+ TYPEID Article
+ LBRACE
+ LBRACE
+ OBJECTID initBook
+ LPAREN
+ OBJECTID title_p
+ ',' 
+ OBJECTID author_p
+ RPAREN
+ ';' 
+ OBJECTID per_title
+ ASSIGN
+ OBJECTID per_title_p
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID print
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Book
+ LBRACE
+ LBRACE
+ OBJECTID self
+ '@' 
+ TYPEID Book
+ '.' 
+ OBJECTID print
+ LPAREN
+ RPAREN
+ ';' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "periodical:  "
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ OBJECTID per_title
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "\n"
+ RPAREN
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID BookList
+ INHERITS
+ TYPEID IO
+ LBRACE
+ LPAREN
+ '*' 
+ TYPEID Since
+ OBJECTID abort
+ STR_CONST "returns"
+ OBJECTID type
+ TYPEID Object
+ ',' 
+ OBJECTID we
+ OBJECTID have
+ OBJECTID to
+ OBJECTID add
+ OBJECTID an
+ OBJECTID expression
+ OF
+ OBJECTID type
+ TYPEID Bool
+ OBJECTID here
+ OBJECTID to
+ OBJECTID satisfy
+ OBJECTID the
+ OBJECTID typechecker
+ '.' 
+ TYPEID This
+ OBJECTID code
+ OBJECTID is
+ OBJECTID unreachable
+ ',' 
+ OBJECTID since
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ OBJECTID halts
+ OBJECTID the
+ OBJECTID program
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID isNil
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Bool
+ LBRACE
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ ';' 
+ BOOL_CONST true
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID cons
+ LPAREN
+ OBJECTID hd
+ ':' 
+ TYPEID Book
+ RPAREN
+ ':' 
+ TYPEID Cons
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID new_cell
+ ':' 
+ TYPEID Cons
+ ASSIGN
+ NEW
+ TYPEID Cons
+ IN
+ OBJECTID new_cell
+ '.' 
+ OBJECTID init
+ LPAREN
+ OBJECTID hd
+ ',' 
+ OBJECTID self
+ RPAREN
+ RPAREN
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ TYPEID Since
+ OBJECTID abort
+ STR_CONST "returns"
+ OBJECTID type
+ TYPEID Object
+ ',' 
+ OBJECTID we
+ OBJECTID have
+ OBJECTID to
+ OBJECTID add
+ OBJECTID an
+ OBJECTID expression
+ OF
+ OBJECTID type
+ TYPEID Book
+ OBJECTID here
+ OBJECTID to
+ OBJECTID satisfy
+ OBJECTID the
+ OBJECTID typechecker
+ '.' 
+ TYPEID This
+ OBJECTID code
+ OBJECTID is
+ OBJECTID unreachable
+ ',' 
+ OBJECTID since
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ OBJECTID halts
+ OBJECTID the
+ OBJECTID program
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID car
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Book
+ LBRACE
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ ';' 
+ NEW
+ TYPEID Book
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ TYPEID Since
+ OBJECTID abort
+ STR_CONST "returns"
+ OBJECTID type
+ TYPEID Object
+ ',' 
+ OBJECTID we
+ OBJECTID have
+ OBJECTID to
+ OBJECTID add
+ OBJECTID an
+ OBJECTID expression
+ OF
+ OBJECTID type
+ TYPEID BookList
+ OBJECTID here
+ OBJECTID to
+ OBJECTID satisfy
+ OBJECTID the
+ OBJECTID typechecker
+ '.' 
+ TYPEID This
+ OBJECTID code
+ OBJECTID is
+ OBJECTID unreachable
+ ',' 
+ OBJECTID since
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ OBJECTID halts
+ OBJECTID the
+ OBJECTID program
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID cdr
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID BookList
+ LBRACE
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ ';' 
+ NEW
+ TYPEID BookList
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID print_list
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Object
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Cons
+ INHERITS
+ TYPEID BookList
+ LBRACE
+ OBJECTID xcar
+ ':' 
+ TYPEID Book
+ ';' 
+ OBJECTID xcdr
+ ':' 
+ TYPEID BookList
+ ';' 
+ OBJECTID isNil
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Bool
+ LBRACE
+ BOOL_CONST false
+ RBRACE
+ ';' 
+ OBJECTID init
+ LPAREN
+ OBJECTID hd
+ ':' 
+ TYPEID Book
+ ',' 
+ OBJECTID tl
+ ':' 
+ TYPEID BookList
+ RPAREN
+ ':' 
+ TYPEID Cons
+ LBRACE
+ LBRACE
+ OBJECTID xcar
+ ASSIGN
+ OBJECTID hd
+ ';' 
+ OBJECTID xcdr
+ ASSIGN
+ OBJECTID tl
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID car
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Book
+ LBRACE
+ OBJECTID xcar
+ RBRACE
+ ';' 
+ OBJECTID cdr
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID BookList
+ LBRACE
+ OBJECTID xcdr
+ RBRACE
+ ';' 
+ OBJECTID print_list
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Object
+ LBRACE
+ LBRACE
+ CASE
+ OBJECTID xcar
+ '.' 
+ OBJECTID print
+ LPAREN
+ RPAREN
+ OF
+ OBJECTID dummy
+ ':' 
+ TYPEID Book
+ DARROW
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "- dynamic type was Book -\n"
+ RPAREN
+ ';' 
+ OBJECTID dummy
+ ':' 
+ TYPEID Article
+ DARROW
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "- dynamic type was Article -\n"
+ RPAREN
+ ';' 
+ ESAC
+ ';' 
+ OBJECTID xcdr
+ '.' 
+ OBJECTID print_list
+ LPAREN
+ RPAREN
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Nil
+ INHERITS
+ TYPEID BookList
+ LBRACE
+ OBJECTID isNil
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Bool
+ LBRACE
+ BOOL_CONST true
+ RBRACE
+ ';' 
+ OBJECTID print_list
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Object
+ LBRACE
+ BOOL_CONST true
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Main
+ LBRACE
+ OBJECTID books
+ ':' 
+ TYPEID BookList
+ ';' 
+ OBJECTID main
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Object
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID a_book
+ ':' 
+ TYPEID Book
+ ASSIGN
+ LPAREN
+ NEW
+ TYPEID Book
+ RPAREN
+ '.' 
+ OBJECTID initBook
+ LPAREN
+ STR_CONST "Compilers, Principles, Techniques, and Tools"
+ ',' 
+ STR_CONST "Aho, Sethi, and Ullman"
+ RPAREN
+ IN
+ LPAREN
+ LET
+ OBJECTID an_article
+ ':' 
+ TYPEID Article
+ ASSIGN
+ LPAREN
+ NEW
+ TYPEID Article
+ RPAREN
+ '.' 
+ OBJECTID initArticle
+ LPAREN
+ STR_CONST "The Top 100 CD_ROMs"
+ ',' 
+ STR_CONST "Ulanoff"
+ ',' 
+ STR_CONST "PC Magazine"
+ RPAREN
+ IN
+ LBRACE
+ OBJECTID books
+ ASSIGN
+ LPAREN
+ NEW
+ TYPEID Nil
+ RPAREN
+ '.' 
+ OBJECTID cons
+ LPAREN
+ OBJECTID a_book
+ RPAREN
+ '.' 
+ OBJECTID cons
+ LPAREN
+ OBJECTID an_article
+ RPAREN
+ ';' 
+ OBJECTID books
+ '.' 
+ OBJECTID print_list
+ LPAREN
+ RPAREN
+ ';' 
+ RBRACE
+ RPAREN
+ RPAREN
+ RBRACE
+ ';' 
+ RBRACE
+ ';'

@@ -1,1 +1,39 @@
+Error de sintaxis: token inesperado '(' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=4, index=41, end=42)' en línea 4
+Error de sintaxis: token inesperado 'a' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'String' en línea 4
+Error de sintaxis: token inesperado ',' en línea 4
+Error de sintaxis: token inesperado 'b' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Int' en línea 4
+Error de sintaxis: token inesperado ',' en línea 4
+Error de sintaxis: token inesperado 'c' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Int' en línea 4
+Error de sintaxis: token inesperado ',' en línea 4
+Error de sintaxis: token inesperado 'd' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Int' en línea 4
+Error de sintaxis: token inesperado ')' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Hello' en línea 4
+Error de sintaxis: token inesperado '{' en línea 4
+Error de sintaxis: token inesperado 'a' en línea 5
+Error de sintaxis: token inesperado '+' en línea 5
+Error de sintaxis: token inesperado 'b' en línea 5
+Error de sintaxis: token inesperado '+' en línea 5
+Error de sintaxis: token inesperado 'c' en línea 5
+Error de sintaxis: token inesperado '+' en línea 5
+Error de sintaxis: token inesperado 'd' en línea 5
+Error de sintaxis: token inesperado '}' en línea 6
+Error de sintaxis: token inesperado ';' en línea 6
+Error de sintaxis: token inesperado '}' en línea 8
+Error de sintaxis: token inesperado ';' en línea 8
+Error de sintaxis: fin inesperado del archivo
 Compilation halted due to lex and parse errors

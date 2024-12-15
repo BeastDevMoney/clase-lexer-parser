@@ -1,1 +1,39 @@
+Error de sintaxis: token inesperado '(' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado ')' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado '{' en línea 3
+Error de sintaxis: token inesperado 'if' en línea 3
+Error de sintaxis: token inesperado 'x' en línea 3
+Error de sintaxis: token inesperado '=' en línea 3
+Error de sintaxis: token inesperado '3' en línea 3
+Error de sintaxis: token inesperado 'then' en línea 3
+Error de sintaxis: token inesperado '{' en línea 3
+Error de sintaxis: token inesperado 'if' en línea 3
+Error de sintaxis: token inesperado 'x' en línea 3
+Error de sintaxis: token inesperado '<' en línea 3
+Error de sintaxis: token inesperado '2' en línea 3
+Error de sintaxis: token inesperado 'then' en línea 3
+Error de sintaxis: token inesperado 'new' en línea 3
+Error de sintaxis: token inesperado 'Foo' en línea 3
+Error de sintaxis: token inesperado 'else' en línea 3
+Error de sintaxis: token inesperado 'isvoid' en línea 3
+Error de sintaxis: token inesperado 'baz' en línea 3
+Error de sintaxis: token inesperado 'fi' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado 'else' en línea 3
+Error de sintaxis: token inesperado 'False' en línea 3
+Error de sintaxis: token inesperado 'fi' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: fin inesperado del archivo
 Compilation halted due to lex and parse errors

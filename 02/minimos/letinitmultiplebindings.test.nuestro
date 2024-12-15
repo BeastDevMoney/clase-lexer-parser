@@ -1,1 +1,35 @@
+Error de sintaxis: token inesperado '(' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=3, index=32, end=33)' en línea 3
+Error de sintaxis: token inesperado ')' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'String' en línea 3
+Error de sintaxis: token inesperado '{' en línea 3
+Error de sintaxis: token inesperado 'let' en línea 3
+Error de sintaxis: token inesperado 'x' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado '<-' en línea 3
+Error de sintaxis: token inesperado '5' en línea 3
+Error de sintaxis: token inesperado ',' en línea 3
+Error de sintaxis: token inesperado 'y' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'String' en línea 3
+Error de sintaxis: token inesperado '<-' en línea 3
+Error de sintaxis: token inesperado '"biddle"' en línea 3
+Error de sintaxis: token inesperado ',' en línea 3
+Error de sintaxis: token inesperado 'z' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado 'in' en línea 3
+Error de sintaxis: token inesperado 'x' en línea 3
+Error de sintaxis: token inesperado '}' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado '}' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: fin inesperado del archivo
 Compilation halted due to lex and parse errors

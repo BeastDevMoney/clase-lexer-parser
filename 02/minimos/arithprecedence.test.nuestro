@@ -1,1 +1,91 @@
+Error de sintaxis: token inesperado '(' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=12, end=13)' en línea 2
+Error de sintaxis: token inesperado ')' en línea 2
+Error de sintaxis: token inesperado ':' en línea 2
+Error de sintaxis: token inesperado 'Int' en línea 2
+Error de sintaxis: token inesperado '{' en línea 2
+Error de sintaxis: token inesperado '{' en línea 2
+Error de sintaxis: token inesperado 'a' en línea 3
+Error de sintaxis: token inesperado '+' en línea 3
+Error de sintaxis: token inesperado 'b' en línea 3
+Error de sintaxis: token inesperado '-' en línea 3
+Error de sintaxis: token inesperado 'c' en línea 3
+Error de sintaxis: token inesperado ';' en línea 3
+Error de sintaxis: token inesperado 'a' en línea 4
+Error de sintaxis: token inesperado '-' en línea 4
+Error de sintaxis: token inesperado 'b' en línea 4
+Error de sintaxis: token inesperado '+' en línea 4
+Error de sintaxis: token inesperado 'c' en línea 4
+Error de sintaxis: token inesperado ';' en línea 4
+Error de sintaxis: token inesperado 'a' en línea 6
+Error de sintaxis: token inesperado '+' en línea 6
+Error de sintaxis: token inesperado 'b' en línea 6
+Error de sintaxis: token inesperado '*' en línea 6
+Error de sintaxis: token inesperado 'c' en línea 6
+Error de sintaxis: token inesperado ';' en línea 6
+Error de sintaxis: token inesperado 'a' en línea 7
+Error de sintaxis: token inesperado '*' en línea 7
+Error de sintaxis: token inesperado 'b' en línea 7
+Error de sintaxis: token inesperado '+' en línea 7
+Error de sintaxis: token inesperado 'c' en línea 7
+Error de sintaxis: token inesperado ';' en línea 7
+Error de sintaxis: token inesperado 'a' en línea 9
+Error de sintaxis: token inesperado '+' en línea 9
+Error de sintaxis: token inesperado 'b' en línea 9
+Error de sintaxis: token inesperado '/' en línea 9
+Error de sintaxis: token inesperado 'c' en línea 9
+Error de sintaxis: token inesperado ';' en línea 9
+Error de sintaxis: token inesperado 'a' en línea 10
+Error de sintaxis: token inesperado '/' en línea 10
+Error de sintaxis: token inesperado 'b' en línea 10
+Error de sintaxis: token inesperado '+' en línea 10
+Error de sintaxis: token inesperado 'c' en línea 10
+Error de sintaxis: token inesperado ';' en línea 10
+Error de sintaxis: token inesperado 'a' en línea 12
+Error de sintaxis: token inesperado '-' en línea 12
+Error de sintaxis: token inesperado 'b' en línea 12
+Error de sintaxis: token inesperado '*' en línea 12
+Error de sintaxis: token inesperado 'c' en línea 12
+Error de sintaxis: token inesperado ';' en línea 12
+Error de sintaxis: token inesperado 'a' en línea 13
+Error de sintaxis: token inesperado '*' en línea 13
+Error de sintaxis: token inesperado 'b' en línea 13
+Error de sintaxis: token inesperado '-' en línea 13
+Error de sintaxis: token inesperado 'c' en línea 13
+Error de sintaxis: token inesperado ';' en línea 13
+Error de sintaxis: token inesperado 'a' en línea 15
+Error de sintaxis: token inesperado '-' en línea 15
+Error de sintaxis: token inesperado 'b' en línea 15
+Error de sintaxis: token inesperado '/' en línea 15
+Error de sintaxis: token inesperado 'c' en línea 15
+Error de sintaxis: token inesperado ';' en línea 15
+Error de sintaxis: token inesperado 'a' en línea 16
+Error de sintaxis: token inesperado '/' en línea 16
+Error de sintaxis: token inesperado 'b' en línea 16
+Error de sintaxis: token inesperado '-' en línea 16
+Error de sintaxis: token inesperado 'c' en línea 16
+Error de sintaxis: token inesperado ';' en línea 16
+Error de sintaxis: token inesperado 'a' en línea 18
+Error de sintaxis: token inesperado '*' en línea 18
+Error de sintaxis: token inesperado 'b' en línea 18
+Error de sintaxis: token inesperado '/' en línea 18
+Error de sintaxis: token inesperado 'c' en línea 18
+Error de sintaxis: token inesperado ';' en línea 18
+Error de sintaxis: token inesperado 'a' en línea 19
+Error de sintaxis: token inesperado '/' en línea 19
+Error de sintaxis: token inesperado 'b' en línea 19
+Error de sintaxis: token inesperado '*' en línea 19
+Error de sintaxis: token inesperado 'c' en línea 19
+Error de sintaxis: token inesperado ';' en línea 19
+Error de sintaxis: token inesperado '}' en línea 20
+Error de sintaxis: token inesperado '}' en línea 20
+Error de sintaxis: token inesperado ';' en línea 20
+Error de sintaxis: token inesperado '}' en línea 21
+Error de sintaxis: token inesperado ';' en línea 21
+Error de sintaxis: fin inesperado del archivo
 Compilation halted due to lex and parse errors

@@ -1,0 +1,8 @@
+#name "s14.test.cool"
+ OBJECTID token
+ LPAREN
+ '*' 
+ '*' 
+ OBJECTID cmt
+ ERROR "Unmatched *)"
+ OBJECTID token2

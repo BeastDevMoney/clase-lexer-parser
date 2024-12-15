@@ -1,0 +1,57 @@
+#name "operators.cool"
+ LPAREN
+ '*' 
+ OBJECTID some
+ OBJECTID operators
+ ERROR "Unmatched *)"
+ ';' 
+ LBRACE
+ RBRACE
+ LPAREN
+ ',' 
+ RPAREN
+ ':' 
+ '@' 
+ '.' 
+ '+' 
+ '-' 
+ '*' 
+ '/' 
+ '~' 
+ '<' 
+ '=' 
+ ASSIGN
+ DARROW
+ LE
+ LPAREN
+ '*' 
+ OBJECTID should
+ OBJECTID be
+ '<' 
+ OBJECTID and
+ LE
+ ERROR "Unmatched *)"
+ '<' 
+ LE
+ LPAREN
+ '*' 
+ OBJECTID should
+ OBJECTID be
+ LE
+ OBJECTID and
+ '=' 
+ ERROR "Unmatched *)"
+ LE
+ '=' 
+ LPAREN
+ '*' 
+ OBJECTID should
+ OBJECTID be
+ LE
+ OBJECTID and
+ DARROW
+ ERROR "Unmatched *)"
+ LE
+ DARROW
+ '<' 
+ ASSIGN

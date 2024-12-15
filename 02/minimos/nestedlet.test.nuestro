@@ -1,1 +1,59 @@
+Error de sintaxis: token inesperado '(' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'Token(type='(', value='(', lineno=2, index=14, end=15)' en línea 2
+Error de sintaxis: token inesperado 'x' en línea 2
+Error de sintaxis: token inesperado ':' en línea 2
+Error de sintaxis: token inesperado 'Int' en línea 2
+Error de sintaxis: token inesperado ')' en línea 2
+Error de sintaxis: token inesperado ':' en línea 2
+Error de sintaxis: token inesperado 'Object' en línea 2
+Error de sintaxis: token inesperado '{' en línea 2
+Error de sintaxis: token inesperado 'let' en línea 3
+Error de sintaxis: token inesperado 'x' en línea 3
+Error de sintaxis: token inesperado ':' en línea 3
+Error de sintaxis: token inesperado 'Int' en línea 3
+Error de sintaxis: token inesperado '<-' en línea 3
+Error de sintaxis: token inesperado '3' en línea 3
+Error de sintaxis: token inesperado 'in' en línea 3
+Error de sintaxis: token inesperado 'let' en línea 4
+Error de sintaxis: token inesperado 'y' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Bool' en línea 4
+Error de sintaxis: token inesperado ',' en línea 4
+Error de sintaxis: token inesperado 'z' en línea 4
+Error de sintaxis: token inesperado ':' en línea 4
+Error de sintaxis: token inesperado 'Object' en línea 4
+Error de sintaxis: token inesperado 'in' en línea 4
+Error de sintaxis: token inesperado 'let' en línea 5
+Error de sintaxis: token inesperado 'a' en línea 5
+Error de sintaxis: token inesperado ':' en línea 5
+Error de sintaxis: token inesperado 'Object' en línea 5
+Error de sintaxis: token inesperado ',' en línea 5
+Error de sintaxis: token inesperado 'b' en línea 5
+Error de sintaxis: token inesperado ':' en línea 5
+Error de sintaxis: token inesperado 'Object' en línea 5
+Error de sintaxis: token inesperado ',' en línea 5
+Error de sintaxis: token inesperado 'c' en línea 5
+Error de sintaxis: token inesperado ':' en línea 5
+Error de sintaxis: token inesperado 'Object' en línea 5
+Error de sintaxis: token inesperado 'in' en línea 5
+Error de sintaxis: token inesperado 'let' en línea 6
+Error de sintaxis: token inesperado 'd' en línea 6
+Error de sintaxis: token inesperado ':' en línea 6
+Error de sintaxis: token inesperado 'Int' en línea 6
+Error de sintaxis: token inesperado '<-' en línea 6
+Error de sintaxis: token inesperado '6' en línea 6
+Error de sintaxis: token inesperado 'in' en línea 6
+Error de sintaxis: token inesperado 'd' en línea 7
+Error de sintaxis: token inesperado '+' en línea 7
+Error de sintaxis: token inesperado '5' en línea 7
+Error de sintaxis: token inesperado '}' en línea 8
+Error de sintaxis: token inesperado ';' en línea 8
+Error de sintaxis: token inesperado '}' en línea 9
+Error de sintaxis: token inesperado ';' en línea 9
+Error de sintaxis: fin inesperado del archivo
 Compilation halted due to lex and parse errors

@@ -1,0 +1,282 @@
+#name "new_complex.cool"
+ CLASS
+ TYPEID Main
+ INHERITS
+ TYPEID IO
+ LBRACE
+ OBJECTID main
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID SELF_TYPE
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID c
+ ':' 
+ TYPEID Complex
+ ASSIGN
+ LPAREN
+ NEW
+ TYPEID Complex
+ RPAREN
+ '.' 
+ OBJECTID init
+ LPAREN
+ INT_CONST 1
+ ',' 
+ INT_CONST 1
+ RPAREN
+ IN
+ LBRACE
+ IF
+ OBJECTID c
+ '.' 
+ OBJECTID reflect_X
+ LPAREN
+ RPAREN
+ '=' 
+ OBJECTID c
+ '.' 
+ OBJECTID reflect_0
+ LPAREN
+ RPAREN
+ THEN
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "=)\n"
+ RPAREN
+ ELSE
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "=(\n"
+ RPAREN
+ FI
+ ';' 
+ IF
+ OBJECTID c
+ '.' 
+ OBJECTID reflect_X
+ LPAREN
+ RPAREN
+ '.' 
+ OBJECTID reflect_Y
+ LPAREN
+ RPAREN
+ '.' 
+ OBJECTID equal
+ LPAREN
+ OBJECTID c
+ '.' 
+ OBJECTID reflect_0
+ LPAREN
+ RPAREN
+ RPAREN
+ THEN
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "=)\n"
+ RPAREN
+ ELSE
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "=(\n"
+ RPAREN
+ FI
+ ';' 
+ RBRACE
+ RPAREN
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Complex
+ INHERITS
+ TYPEID IO
+ LBRACE
+ OBJECTID x
+ ':' 
+ TYPEID Int
+ ';' 
+ OBJECTID y
+ ':' 
+ TYPEID Int
+ ';' 
+ OBJECTID init
+ LPAREN
+ OBJECTID a
+ ':' 
+ TYPEID Int
+ ',' 
+ OBJECTID b
+ ':' 
+ TYPEID Int
+ RPAREN
+ ':' 
+ TYPEID Complex
+ LBRACE
+ LBRACE
+ OBJECTID x
+ '=' 
+ OBJECTID a
+ ';' 
+ OBJECTID y
+ '=' 
+ OBJECTID b
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID print
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Object
+ LBRACE
+ IF
+ OBJECTID y
+ '=' 
+ INT_CONST 0
+ THEN
+ OBJECTID out_int
+ LPAREN
+ OBJECTID x
+ RPAREN
+ ELSE
+ OBJECTID out_int
+ LPAREN
+ OBJECTID x
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "+"
+ RPAREN
+ '.' 
+ OBJECTID out_int
+ LPAREN
+ OBJECTID y
+ RPAREN
+ '.' 
+ OBJECTID out_string
+ LPAREN
+ STR_CONST "I"
+ RPAREN
+ FI
+ RBRACE
+ ';' 
+ OBJECTID reflect_0
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Complex
+ LBRACE
+ LBRACE
+ OBJECTID x
+ '=' 
+ '~' 
+ OBJECTID x
+ ';' 
+ OBJECTID y
+ '=' 
+ '~' 
+ OBJECTID y
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID reflect_X
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Complex
+ LBRACE
+ LBRACE
+ OBJECTID y
+ '=' 
+ '~' 
+ OBJECTID y
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID reflect_Y
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Complex
+ LBRACE
+ LBRACE
+ OBJECTID x
+ '=' 
+ '~' 
+ OBJECTID x
+ ';' 
+ OBJECTID self
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID equal
+ LPAREN
+ OBJECTID d
+ ':' 
+ TYPEID Complex
+ RPAREN
+ ':' 
+ TYPEID Bool
+ LBRACE
+ IF
+ OBJECTID x
+ '=' 
+ OBJECTID d
+ '.' 
+ OBJECTID x_value
+ LPAREN
+ RPAREN
+ THEN
+ IF
+ OBJECTID y
+ '=' 
+ OBJECTID d
+ '.' 
+ OBJECTID y_value
+ LPAREN
+ RPAREN
+ THEN
+ BOOL_CONST true
+ ELSE
+ BOOL_CONST false
+ FI
+ ELSE
+ BOOL_CONST false
+ FI
+ RBRACE
+ ';' 
+ OBJECTID x_value
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ OBJECTID x
+ RBRACE
+ ';' 
+ OBJECTID y_value
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ OBJECTID y
+ RBRACE
+ ';' 
+ RBRACE
+ ';'

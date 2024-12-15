@@ -1,0 +1,12 @@
+#name "wq0607-c1.cool"
+ LPAREN
+ '*' 
+ TYPEID COMMENT
+ ',' 
+ TYPEID STRING
+ ',' 
+ TYPEID COMMENT
+ ',' 
+ TYPEID COMMENT
+ ERROR "Unmatched *)"
+ STR_CONST "--"

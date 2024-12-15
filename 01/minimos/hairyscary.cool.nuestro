@@ -1,0 +1,341 @@
+#name "hairyscary.cool"
+ LPAREN
+ '*' 
+ OBJECTID hairy
+ '.' 
+ '.' 
+ '.' 
+ ERROR "Unmatched *)"
+ CLASS
+ TYPEID Foo
+ INHERITS
+ TYPEID Bazz
+ LBRACE
+ OBJECTID a
+ ':' 
+ TYPEID Razz
+ ASSIGN
+ CASE
+ OBJECTID self
+ OF
+ OBJECTID n
+ ':' 
+ TYPEID Razz
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Bar
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Foo
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Razz
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Bar
+ DARROW
+ OBJECTID n
+ ';' 
+ ESAC
+ ';' 
+ OBJECTID b
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID a
+ '.' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID g
+ '.' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID printh
+ LPAREN
+ RPAREN
+ ';' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID h
+ IN
+ LBRACE
+ OBJECTID h
+ ASSIGN
+ OBJECTID h
+ '+' 
+ INT_CONST 2
+ ';' 
+ OBJECTID i
+ ';' 
+ RBRACE
+ RPAREN
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Bar
+ INHERITS
+ TYPEID Razz
+ LBRACE
+ OBJECTID c
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ ';' 
+ OBJECTID d
+ ':' 
+ TYPEID Object
+ ASSIGN
+ OBJECTID printh
+ LPAREN
+ RPAREN
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Razz
+ INHERITS
+ TYPEID Foo
+ LBRACE
+ OBJECTID e
+ ':' 
+ TYPEID Bar
+ ASSIGN
+ CASE
+ OBJECTID self
+ OF
+ OBJECTID n
+ ':' 
+ TYPEID Razz
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Bar
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Bar
+ DARROW
+ OBJECTID n
+ ';' 
+ ESAC
+ ';' 
+ OBJECTID f
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID a
+ '@' 
+ TYPEID Bazz
+ '.' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID g
+ '.' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID e
+ '.' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ '+' 
+ OBJECTID printh
+ LPAREN
+ RPAREN
+ ';' 
+ RBRACE
+ ';' 
+ CLASS
+ TYPEID Bazz
+ INHERITS
+ TYPEID IO
+ LBRACE
+ OBJECTID h
+ ':' 
+ TYPEID Int
+ ASSIGN
+ INT_CONST 1
+ ';' 
+ OBJECTID g
+ ':' 
+ TYPEID Foo
+ ASSIGN
+ CASE
+ OBJECTID self
+ OF
+ OBJECTID n
+ ':' 
+ TYPEID Bazz
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Foo
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Razz
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Bar
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Foo
+ DARROW
+ LPAREN
+ NEW
+ TYPEID Razz
+ RPAREN
+ ';' 
+ OBJECTID n
+ ':' 
+ TYPEID Bar
+ DARROW
+ OBJECTID n
+ ';' 
+ ESAC
+ ';' 
+ OBJECTID i
+ ':' 
+ TYPEID Object
+ ASSIGN
+ OBJECTID printh
+ LPAREN
+ RPAREN
+ ';' 
+ OBJECTID printh
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ LBRACE
+ OBJECTID out_int
+ LPAREN
+ OBJECTID h
+ RPAREN
+ ';' 
+ INT_CONST 0
+ ';' 
+ RBRACE
+ RBRACE
+ ';' 
+ OBJECTID doh
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID h
+ IN
+ LBRACE
+ OBJECTID h
+ ASSIGN
+ OBJECTID h
+ '+' 
+ INT_CONST 1
+ ';' 
+ OBJECTID i
+ ';' 
+ RBRACE
+ RPAREN
+ RBRACE
+ ';' 
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID scary
+ '.' 
+ '.' 
+ '.' 
+ ERROR "Unmatched *)"
+ CLASS
+ TYPEID Main
+ LBRACE
+ OBJECTID a
+ ':' 
+ TYPEID Bazz
+ ASSIGN
+ NEW
+ TYPEID Bazz
+ ';' 
+ OBJECTID b
+ ':' 
+ TYPEID Foo
+ ASSIGN
+ NEW
+ TYPEID Foo
+ ';' 
+ OBJECTID c
+ ':' 
+ TYPEID Razz
+ ASSIGN
+ NEW
+ TYPEID Razz
+ ';' 
+ OBJECTID d
+ ':' 
+ TYPEID Bar
+ ASSIGN
+ NEW
+ TYPEID Bar
+ ';' 
+ OBJECTID main
+ LPAREN
+ RPAREN
+ ':' 
+ TYPEID String
+ LBRACE
+ STR_CONST "do nothing"
+ RBRACE
+ ';' 
+ RBRACE
+ ';'

@@ -1,0 +1,657 @@
+#name "atoi.cool"
+ LPAREN
+ '*' 
+ TYPEID The
+ CLASS
+ TYPEID A2I
+ OBJECTID provides
+ OBJECTID integer
+ '-' 
+ OBJECTID to
+ '-' 
+ OBJECTID string
+ OBJECTID and
+ OBJECTID string
+ '-' 
+ OBJECTID to
+ '-' 
+ OBJECTID integer
+ OBJECTID conversion
+ OBJECTID routines
+ '.' 
+ TYPEID To
+ OBJECTID use
+ OBJECTID these
+ OBJECTID routines
+ ',' 
+ OBJECTID either
+ OBJECTID inherit
+ OBJECTID them
+ IN
+ OBJECTID the
+ CLASS
+ OBJECTID where
+ OBJECTID needed
+ ',' 
+ OBJECTID have
+ OBJECTID a
+ OBJECTID dummy
+ OBJECTID variable
+ OBJECTID bound
+ OBJECTID to
+ OBJECTID something
+ OF
+ OBJECTID type
+ TYPEID A2I
+ ',' 
+ OBJECTID or
+ OBJECTID simpl
+ OBJECTID write
+ LPAREN
+ NEW
+ TYPEID A2I
+ RPAREN
+ '.' 
+ OBJECTID method
+ LPAREN
+ OBJECTID argument
+ RPAREN
+ '.' 
+ ERROR "Unmatched *)"
+ LPAREN
+ '*' 
+ OBJECTID c2i
+ TYPEID Converts
+ OBJECTID a
+ INT_CONST 1
+ '-' 
+ OBJECTID character
+ OBJECTID string
+ OBJECTID to
+ OBJECTID an
+ OBJECTID integer
+ '.' 
+ TYPEID Aborts
+ IF
+ OBJECTID the
+ OBJECTID string
+ OBJECTID is
+ NOT
+ STR_CONST "0"
+ OBJECTID through
+ STR_CONST "9"
+ ERROR "Unmatched *)"
+ CLASS
+ TYPEID A2I
+ LBRACE
+ OBJECTID c2i
+ LPAREN
+ OBJECTID char
+ ':' 
+ TYPEID String
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "0"
+ THEN
+ INT_CONST 0
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "1"
+ THEN
+ INT_CONST 1
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "2"
+ THEN
+ INT_CONST 2
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "3"
+ THEN
+ INT_CONST 3
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "4"
+ THEN
+ INT_CONST 4
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "5"
+ THEN
+ INT_CONST 5
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "6"
+ THEN
+ INT_CONST 6
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "7"
+ THEN
+ INT_CONST 7
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "8"
+ THEN
+ INT_CONST 8
+ ELSE
+ IF
+ OBJECTID char
+ '=' 
+ STR_CONST "9"
+ THEN
+ INT_CONST 9
+ ELSE
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ ';' 
+ INT_CONST 0
+ ';' 
+ RBRACE
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID i2c
+ OBJECTID is
+ OBJECTID the
+ OBJECTID inverse
+ OF
+ OBJECTID c2i
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID i2c
+ LPAREN
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ RPAREN
+ ':' 
+ TYPEID String
+ LBRACE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 0
+ THEN
+ STR_CONST "0"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 1
+ THEN
+ STR_CONST "1"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 2
+ THEN
+ STR_CONST "2"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 3
+ THEN
+ STR_CONST "3"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 4
+ THEN
+ STR_CONST "4"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 5
+ THEN
+ STR_CONST "5"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 6
+ THEN
+ STR_CONST "6"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 7
+ THEN
+ STR_CONST "7"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 8
+ THEN
+ STR_CONST "8"
+ ELSE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 9
+ THEN
+ STR_CONST "9"
+ ELSE
+ LBRACE
+ OBJECTID abort
+ LPAREN
+ RPAREN
+ ';' 
+ STR_CONST ""
+ ';' 
+ RBRACE
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ FI
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID a2i
+ OBJECTID converts
+ OBJECTID an
+ TYPEID ASCII
+ OBJECTID string
+ OBJECTID into
+ OBJECTID an
+ OBJECTID integer
+ '.' 
+ TYPEID The
+ OBJECTID empty
+ OBJECTID string
+ OBJECTID is
+ OBJECTID converted
+ OBJECTID to
+ INT_CONST 0
+ '.' 
+ TYPEID Signed
+ OBJECTID and
+ OBJECTID unsigned
+ OBJECTID strings
+ OBJECTID are
+ OBJECTID handled
+ '.' 
+ TYPEID The
+ OBJECTID method
+ OBJECTID aborts
+ IF
+ OBJECTID the
+ OBJECTID string
+ OBJECTID does
+ NOT
+ OBJECTID represent
+ OBJECTID an
+ OBJECTID integer
+ '.' 
+ TYPEID Very
+ OBJECTID long
+ OBJECTID strings
+ OF
+ OBJECTID digits
+ OBJECTID produce
+ OBJECTID strange
+ OBJECTID answers
+ OBJECTID because
+ OF
+ OBJECTID arithmetic
+ OBJECTID overflow
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID a2i
+ LPAREN
+ OBJECTID s
+ ':' 
+ TYPEID String
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ IF
+ OBJECTID s
+ '.' 
+ OBJECTID length
+ LPAREN
+ RPAREN
+ '=' 
+ INT_CONST 0
+ THEN
+ INT_CONST 0
+ ELSE
+ IF
+ OBJECTID s
+ '.' 
+ OBJECTID substr
+ LPAREN
+ INT_CONST 0
+ ',' 
+ INT_CONST 1
+ RPAREN
+ '=' 
+ STR_CONST "-"
+ THEN
+ '~' 
+ OBJECTID a2i_aux
+ LPAREN
+ OBJECTID s
+ '.' 
+ OBJECTID substr
+ LPAREN
+ INT_CONST 1
+ ',' 
+ OBJECTID s
+ '.' 
+ OBJECTID length
+ LPAREN
+ RPAREN
+ '-' 
+ INT_CONST 1
+ RPAREN
+ RPAREN
+ ELSE
+ IF
+ OBJECTID s
+ '.' 
+ OBJECTID substr
+ LPAREN
+ INT_CONST 0
+ ',' 
+ INT_CONST 1
+ RPAREN
+ '=' 
+ STR_CONST "+"
+ THEN
+ OBJECTID a2i_aux
+ LPAREN
+ OBJECTID s
+ '.' 
+ OBJECTID substr
+ LPAREN
+ INT_CONST 1
+ ',' 
+ OBJECTID s
+ '.' 
+ OBJECTID length
+ LPAREN
+ RPAREN
+ '-' 
+ INT_CONST 1
+ RPAREN
+ RPAREN
+ ELSE
+ OBJECTID a2i_aux
+ LPAREN
+ OBJECTID s
+ RPAREN
+ FI
+ FI
+ FI
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID a2i_aux
+ OBJECTID converts
+ OBJECTID the
+ OBJECTID usigned
+ OBJECTID portion
+ OF
+ OBJECTID the
+ OBJECTID string
+ '.' 
+ TYPEID As
+ OBJECTID a
+ OBJECTID programming
+ OBJECTID example
+ ',' 
+ OBJECTID this
+ OBJECTID method
+ OBJECTID is
+ OBJECTID written
+ OBJECTID iteratively
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID a2i_aux
+ LPAREN
+ OBJECTID s
+ ':' 
+ TYPEID String
+ RPAREN
+ ':' 
+ TYPEID Int
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID int
+ ':' 
+ TYPEID Int
+ ASSIGN
+ INT_CONST 0
+ IN
+ LBRACE
+ LPAREN
+ LET
+ OBJECTID j
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID s
+ '.' 
+ OBJECTID length
+ LPAREN
+ RPAREN
+ IN
+ LPAREN
+ LET
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ ASSIGN
+ INT_CONST 0
+ IN
+ WHILE
+ OBJECTID i
+ '<' 
+ OBJECTID j
+ LOOP
+ LBRACE
+ OBJECTID int
+ ASSIGN
+ OBJECTID int
+ '*' 
+ INT_CONST 10
+ '+' 
+ OBJECTID c2i
+ LPAREN
+ OBJECTID s
+ '.' 
+ OBJECTID substr
+ LPAREN
+ OBJECTID i
+ ',' 
+ INT_CONST 1
+ RPAREN
+ RPAREN
+ ';' 
+ OBJECTID i
+ ASSIGN
+ OBJECTID i
+ '+' 
+ INT_CONST 1
+ ';' 
+ RBRACE
+ POOL
+ RPAREN
+ RPAREN
+ ';' 
+ OBJECTID int
+ ';' 
+ RBRACE
+ RPAREN
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID i2a
+ OBJECTID converts
+ OBJECTID an
+ OBJECTID integer
+ OBJECTID to
+ OBJECTID a
+ OBJECTID string
+ '.' 
+ TYPEID Positive
+ OBJECTID and
+ OBJECTID negative
+ OBJECTID numbers
+ OBJECTID are
+ OBJECTID handled
+ OBJECTID correctly
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID i2a
+ LPAREN
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ RPAREN
+ ':' 
+ TYPEID String
+ LBRACE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 0
+ THEN
+ STR_CONST "0"
+ ELSE
+ IF
+ INT_CONST 0
+ '<' 
+ OBJECTID i
+ THEN
+ OBJECTID i2a_aux
+ LPAREN
+ OBJECTID i
+ RPAREN
+ ELSE
+ STR_CONST "-"
+ '.' 
+ OBJECTID concat
+ LPAREN
+ OBJECTID i2a_aux
+ LPAREN
+ OBJECTID i
+ '*' 
+ '~' 
+ INT_CONST 1
+ RPAREN
+ RPAREN
+ FI
+ FI
+ RBRACE
+ ';' 
+ LPAREN
+ '*' 
+ OBJECTID i2a_aux
+ OBJECTID is
+ OBJECTID an
+ OBJECTID example
+ OBJECTID using
+ OBJECTID recursion
+ '.' 
+ ERROR "Unmatched *)"
+ OBJECTID i2a_aux
+ LPAREN
+ OBJECTID i
+ ':' 
+ TYPEID Int
+ RPAREN
+ ':' 
+ TYPEID String
+ LBRACE
+ IF
+ OBJECTID i
+ '=' 
+ INT_CONST 0
+ THEN
+ STR_CONST ""
+ ELSE
+ LPAREN
+ LET
+ OBJECTID next
+ ':' 
+ TYPEID Int
+ ASSIGN
+ OBJECTID i
+ '/' 
+ INT_CONST 10
+ IN
+ OBJECTID i2a_aux
+ LPAREN
+ OBJECTID next
+ RPAREN
+ '.' 
+ OBJECTID concat
+ LPAREN
+ OBJECTID i2c
+ LPAREN
+ OBJECTID i
+ '-' 
+ OBJECTID next
+ '*' 
+ INT_CONST 10
+ RPAREN
+ RPAREN
+ RPAREN
+ FI
+ RBRACE
+ ';' 
+ RBRACE
+ ';'
